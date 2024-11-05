@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
 
 export default function Chemicals() {
-  const { products } = useFetch("http://localhost:4002/fetchChemicals");
+  const { products } = useFetch(
+    "https://farmerstore-0lmo.onrender.com/fetchChemicals"
+  );
 
   return (
     <div className="chemicals">

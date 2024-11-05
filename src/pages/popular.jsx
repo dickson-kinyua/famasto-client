@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
 
 export default function Popular() {
-  const { products } = useFetch("http://localhost:4002/fetchPopulars");
+  const { products } = useFetch(
+    "https://farmerstore-0lmo.onrender.com/fetchPopulars"
+  );
 
   return (
     <div className="popular">

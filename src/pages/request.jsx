@@ -21,12 +21,15 @@ export default function Request() {
     // Clear any previous errors
     setErr(null);
     try {
-      const response = await fetch("http://localhost:4002/request", {
-        method: "POST",
-        body: JSON.stringify({ product, variety, quantity }),
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://farmerstore-0lmo.onrender.com/request",
+        {
+          method: "POST",
+          body: JSON.stringify({ product, variety, quantity }),
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+        }
+      );
       // Check if response is okay
       if (!response.ok) {
         const errorData = await response.json();

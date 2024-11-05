@@ -8,7 +8,7 @@ export default function ProductDetails() {
     products: product,
     loading,
     error,
-  } = useFetch(`http://localhost:4002/fetchChemicalDetails/${id}`);
+  } = useFetch(`https://farmerstore-0lmo.onrender.com/${id}`);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error fetching product details</div>;

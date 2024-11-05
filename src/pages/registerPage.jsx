@@ -12,11 +12,14 @@ export default function RegisterPage() {
   async function registerUser(e) {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:4002/register", {
-        method: "POST",
-        body: JSON.stringify({ fullnames, phonenumber, email, password }),
-        headers: { "Content-Type": "application/json" },
-      });
+      const response = await fetch(
+        "https://farmerstore-0lmo.onrender.com/register",
+        {
+          method: "POST",
+          body: JSON.stringify({ fullnames, phonenumber, email, password }),
+          headers: { "Content-Type": "application/json" },
+        }
+      );
 
       if (!response) {
         console.log("could not create account");

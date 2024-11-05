@@ -14,9 +14,12 @@ export default function Header() {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const response = await fetch("http://localhost:4002/profile", {
-          credentials: "include",
-        });
+        const response = await fetch(
+          "https://farmerstore-0lmo.onrender.com/profile",
+          {
+            credentials: "include",
+          }
+        );
 
         if (!response.ok) {
           const errorMssg = await response.json();

@@ -11,11 +11,14 @@ export default function Contact() {
   async function handleContact(e) {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:4002/contact", {
-        method: "POSt",
-        body: JSON.stringify({ name, userEmail, message }),
-        headers: { "Content-Type": "application/json" },
-      });
+      const response = await fetch(
+        "https://farmerstore-0lmo.onrender.com/contact",
+        {
+          method: "POSt",
+          body: JSON.stringify({ name, userEmail, message }),
+          headers: { "Content-Type": "application/json" },
+        }
+      );
 
       if (!response.ok) {
         const errorMssg = await response.json();

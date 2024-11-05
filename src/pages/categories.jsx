@@ -7,10 +7,13 @@ export default function Categories() {
 
   const logout = async () => {
     try {
-      const response = await fetch("http://localhost:4002/logout", {
-        method: "POST",
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://farmerstore-0lmo.onrender.com/logout",
+        {
+          method: "POST",
+          credentials: "include",
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Logout failed");

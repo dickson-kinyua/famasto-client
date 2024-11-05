@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
 export default function Machinery() {
-  const { products } = useFetch("http://localhost:4002/fetchMachine");
+  const { products } = useFetch(
+    "https://farmerstore-0lmo.onrender.com/fetchMachine"
+  );
 
   return (
     <div className="machinery">

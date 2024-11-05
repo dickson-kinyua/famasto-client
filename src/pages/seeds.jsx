@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import useFetch from "../useFetch";
 
 export default function Seeds() {
-  const { products: seeds } = useFetch("http://localhost:4002/fetchSeeds");
+  const { products: seeds } = useFetch(
+    "https://farmerstore-0lmo.onrender.com/fetchSeeds"
+  );
 
   return (
     <div className="seeds">

@@ -11,7 +11,7 @@ export default function Cart() {
       if (loggedUser) {
         try {
           const response = await fetch(
-            `http://localhost:4002/requestcart/${loggedUser.id}`,
+            `https://farmerstore-0lmo.onrender.com/${loggedUser.id}`,
             {
               method: "GET",
               credentials: "include",

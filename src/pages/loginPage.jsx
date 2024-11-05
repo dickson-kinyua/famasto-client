@@ -13,12 +13,15 @@ export default function LoginPage() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:4002/login", {
-        method: "POST",
-        body: JSON.stringify({ email, password }),
-        headers: { "Content-Type": "application/json" },
-        credentials: "include", // This ensures cookies are sent with the request
-      });
+      const response = await fetch(
+        "https://farmerstore-0lmo.onrender.com/login",
+        {
+          method: "POST",
+          body: JSON.stringify({ email, password }),
+          headers: { "Content-Type": "application/json" },
+          credentials: "include", // This ensures cookies are sent with the request
+        }
+      );
 
       if (!response.ok) {
         const errorMssg = await response.json();
